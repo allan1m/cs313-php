@@ -1,5 +1,3 @@
 <?php
-
-  phpinfo();
-
+    echo "Coming soon, sorry for the inconvenience. ";
 ?>
