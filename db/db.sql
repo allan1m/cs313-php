@@ -1,0 +1,16 @@
+CREATE TABLE employee(
+id SERIAL NOT NULL PRIMARY KEY,
+last_name VARCHAR(50) NOT NULL,
+first_name VARCHAR(50) NOT NULL,
+position VARCHAR(50) NOT NULL,
+);
+
+CREATE TABLE schedule(
+id SERIAL NOT NULL PRIMARY KEY,
+year SMALLINT NOT NULL,
+month SMALLINT NOT NULL,
+day VARCHAR(50) NOT NULL,
+start_time FLOAT NOT NULL,
+end_time FLOAT NOT NULL,
+employee_id INT NOT NULL REFERENCES employee(id)
+);
