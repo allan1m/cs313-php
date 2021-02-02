@@ -33,12 +33,12 @@
         }
 
         
-        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+        foreach ($db->query('SELECT first_name, last_name, address, phone_number FROM employee') as $row)
         {
-            echo 'Book: ' . $row['book'];
-            echo ' Chapter: ' . $row['chapter'];
-            echo 'Verse: ' . $row['verse'];
-            echo 'Scripture ' . $row['content'];
+            echo 'Firt Name: ' . $row['first_name'];
+            echo ' Last Name: ' . $row['last_name'];
+            echo 'Address: ' . $row['address'];
+            echo 'Phone Number: ' . $row['phone_number'];
             echo '<br/>';
         }
     ?>
