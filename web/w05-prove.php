@@ -10,7 +10,7 @@
     
     <form action="" method="post">
         <input type="radio" name="employee_info" id="employee_info"><label for="employee_info">Employee</label> <br>
-        <input type="radio" name="employee_schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
+        <input type="radio" name="schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
     </form>
 
@@ -49,9 +49,11 @@
             }
         }
 
-        if (isset($POST['employee_schedule'])) {
+        if (isset($POST['schedule'])) {
+            echo 'inside if';
             try
             {
+                echo 'inside try';
                 $dbUrl = getenv('DATABASE_URL');
         
                 $dbOpts = parse_url($dbUrl);
@@ -75,7 +77,7 @@
         
             foreach ($db->query('SELECT work_date, start_work_time, end_work_time FROM schedule') as $row) {
                     {
-                        echo 'hi';
+                        echo 'inside foreach';
                         echo 'Date: ' . $row['work_date'];
                         echo 'Start Time: ' . $row['phone_number'];
                         echo 'End Time: ' . $row['phone_number'];
