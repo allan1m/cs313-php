@@ -51,7 +51,7 @@
     ?>
     <?php
 
-        if (isset($POST['schedule'])) {
+        if (isset($_POST['schedule'])) {
             echo 'inside if';
             try
             {
