@@ -11,7 +11,7 @@
     <form action="" method="post">
         <input type="radio" name="employee_name" id="employee_name">
         <input type="radio" name="employee_schedule" id="empoyee_schedule">
-        <button type="submit" name="submit" value="Submit"></button>
+        <input type="submit" value="submit" name="Submit">
     </form>
 </body>
 </html>
