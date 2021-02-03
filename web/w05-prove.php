@@ -75,6 +75,7 @@
         
             foreach ($db->query('SELECT work_date, start_work_time, end_work_time FROM schedule') as $row) {
                     {
+                        echo 'hi';
                         echo 'Date: ' . $row['work_date'];
                         echo 'Start Time: ' . $row['phone_number'];
                         echo 'End Time: ' . $row['phone_number'];
