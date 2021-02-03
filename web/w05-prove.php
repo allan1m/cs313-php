@@ -10,7 +10,7 @@
     
     <form action="" method="post">
         <input type="radio" name="employee_info" id="employee_info"><label for="employee_info">Employee</label> <br>
-        <input type="radio" name="employee_schedule" id="empoyee_schedule"><label for="employee_schedule">List of employee schedules</label><br>
+        <input type="radio" name="employee_schedule" id="empoyee_schedule"><label for="employee_schedule">Employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
     </form>
 
@@ -49,7 +49,7 @@
             }
         }
 
-        if (isset($POST['employee_schdule'])) {
+        if (isset($POST['employee_schedule'])) {
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
