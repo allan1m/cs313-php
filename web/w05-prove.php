@@ -81,8 +81,8 @@
                     {
                         echo 'inside foreach';
                         echo 'Date: ' . $row['work_date'];
-                        echo 'Start Time: ' . $row['phone_number'];
-                        echo 'End Time: ' . $row['phone_number'];
+                        echo 'Start Time: ' . $row['start_work_time'];
+                        echo 'End Time: ' . $row['end_work_time'];
                         echo '<br/>';
                     }
                 }
