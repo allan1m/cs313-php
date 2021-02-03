@@ -48,6 +48,8 @@
                 echo '<br/>';
             }
         }
+    ?>
+    <?php
 
         if (isset($POST['schedule'])) {
             echo 'inside if';
