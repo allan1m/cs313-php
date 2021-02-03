@@ -13,5 +13,41 @@
         <input type="radio" name="employee_schedule" id="empoyee_schedule"><label for="employee_schedule">List of employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
     </form>
+
+    <?php
+        if (isset($_POST['employee_name'])) {
+            try
+            {
+                $dbUrl = getenv('DATABASE_URL');
+        
+                $dbOpts = parse_url($dbUrl);
+        
+                $dbHost = $dbOpts["host"];
+                $dbPort = $dbOpts["port"];
+                $dbUser = $dbOpts["user"];
+                $dbPassword = $dbOpts["pass"];
+                $dbName = ltrim($dbOpts["path"],'/');
+        
+                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+        
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            }
+            catch (PDOException $ex)
+            {
+                echo 'Error!: ' . $ex->getMessage();
+                die();
+            }
+
+        
+            foreach ($db->query('SELECT first_name, last_name, address, phone_number FROM employee') as $row)
+            {
+                echo 'Firt Name: ' . $row['first_name'];
+                echo ' Last Name: ' . $row['last_name'];
+                echo 'Address: ' . $row['address'];
+                echo 'Phone Number: ' . $row['phone_number'];
+                echo '<br/>';
+            }
+        }
+    ?>
 </body>
 </html>
