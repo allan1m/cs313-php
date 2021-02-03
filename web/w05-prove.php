@@ -10,7 +10,7 @@
     
     <form action="" method="post">
         <input type="radio" name="employee_info" id="employee_info"><label for="employee_info">Employee</label> <br>
-        <input type="radio" name="employee_schedule" id="empoyee_schedule"><label for="employee_schedule">Employee schedules</label><br>
+        <input type="radio" name="employee_schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
     </form>
 
@@ -73,12 +73,9 @@
             }
 
         
-            foreach ($db->query('SELECT first_name, last_name FROM employee') as $row)
-                foreach ($db->query('SELECT work_date, start_work_time, end_work_time, employee_id FROM schedule') as $row) {
+            foreach ($db->query('SELECT work_date, start_work_time, end_work_time FROM schedule') as $row) {
                     {
-                        echo 'Employee ID: ' . $row['employee_id'];
-                        echo 'Firt Name: ' . $row['first_name'];
-                        echo ' Last Name: ' . $row['last_name'];
+                        echo 'Date: ' . $row['work_date'];
                         echo 'Start Time: ' . $row['phone_number'];
                         echo 'End Time: ' . $row['phone_number'];
                         echo '<br/>';
