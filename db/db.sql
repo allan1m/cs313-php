@@ -23,8 +23,16 @@ INSERT INTO employee (last_name, first_name, address, phone_number) VALUES ('Doe
 
 INSERT INTO employee (last_name, first_name, address, phone_number) VALUES ('Doe', 'Junior', '789 ghi st, Phoenix, AZ 85042', '(789)-012-3456');
 
+INSERT INTO employee (last_name, first_name, address, phone_number) VALUES ('Doe', 'Jack', '012 jkl st, Phoenix, AZ 85043', '(012)-345-6789');
+
+INSERT INTO employee (last_name, first_name, address, phone_number) VALUES ('Doe', 'Jessica', '345 mno st, Phoenix, AZ 85044', '(345)-678-9012');
+
 INSERT INTO schedule (work_date, start_work_time, end_work_time, employee_id) VALUES ('2021-01-01', '09:30:00', '06:00:00', 1);
 
 INSERT INTO schedule (work_date, start_work_time, end_work_time, employee_id) VALUES ('2021-01-01', '010:30:00', '07:00:00', 2);
 
 INSERT INTO schedule (work_date, start_work_time, end_work_time, employee_id) VALUES ('2021-01-01', '011:30:00', '08:00:00', 3);
+
+INSERT INTO schedule (work_date, start_work_time, end_work_time, employee_id) VALUES ('2021-01-02', '09:00:00', '05:00:00', 4);
+
+INSERT INTO schedule (work_date, start_work_time, end_work_time, employee_id) VALUES ('2021-01-02', '010:30:00', '06:00:00', 5);
