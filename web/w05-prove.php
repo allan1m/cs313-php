@@ -1,3 +1,8 @@
+<?php
+
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,8 @@
 </head>
 <body>
     What would you like to do?
+
+    <a href="dbResults.php">Results</a>
     
     <form action="" method="post">
         <input type="radio" name="employee_info" id="employee_info"><label for="employee_info">Employee</label> <br>
@@ -15,6 +22,13 @@
     </form>
 
     <?php
+
+        $_SESSION['fname'];
+        $_SESSION['lname'];
+        $_SESSION['pnumber'];
+        $_SESSION['address'];
+
+
         if (isset($_POST['employee_info'])) {
             try
             {
@@ -39,13 +53,9 @@
             }
 
         
-            foreach ($db->query('SELECT first_name, last_name, address, phone_number FROM employee') as $row)
+            foreach ($db->query('SELECT first_name FROM employee') as $row)
             {
-                echo 'Firt Name: ' . $row['first_name'];
-                echo ' Last Name: ' . $row['last_name'];
-                echo 'Address: ' . $row['address'];
-                echo 'Phone Number: ' . $row['phone_number'];
-                echo '<br/>';
+                $_SESSION['fname'] = $row['first_name'];
             }
         }
     ?>
