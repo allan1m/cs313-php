@@ -52,10 +52,8 @@
     <?php
 
         if (isset($_POST['schedule'])) {
-            echo 'inside if';
             try
             {
-                echo 'inside try';
                 $dbUrl = getenv('DATABASE_URL');
         
                 $dbOpts = parse_url($dbUrl);
@@ -79,7 +77,6 @@
         
             foreach ($db->query('SELECT work_date, start_work_time, end_work_time FROM schedule') as $row) {
                     {
-                        echo 'inside foreach';
                         echo 'Date: ' . $row['work_date'];
                         echo 'Start Time: ' . $row['start_work_time'];
                         echo 'End Time: ' . $row['end_work_time'];
