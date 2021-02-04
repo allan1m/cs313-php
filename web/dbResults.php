@@ -13,8 +13,8 @@
 <body>
     <?php
 
-        if (isset($_POST['employee_info'])) {
-            foreach ($_POST['employee_info'] as $key => $value) {
+        if (isset($_SESSION['fname'])) {
+            foreach ($_SESSION['fname'] as $key => $value) {
                 echo $value;
             }
         }
