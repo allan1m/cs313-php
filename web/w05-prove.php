@@ -38,7 +38,7 @@
         
                 $dbHost = $dbOpts["host"];
                 $dbPort = $dbOpts["port"];
-                $dbUser = $dbOpts["user"];
+                $dbUser = $dbOpts["user"];                                  
                 $dbPassword = $dbOpts["pass"];
                 $dbName = ltrim($dbOpts["path"],'/');
         

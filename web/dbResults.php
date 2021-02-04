@@ -12,13 +12,14 @@
 </head>
 <body>
     <?php
-
-        //var_dump($_SESSION['fname']);
+ 
+        var_dump($_SESSION['fname']);
+        print_r($_SESSION['fname']);
 
         if (isset($_SESSION['fname'])) {
             
-            
-            echo $_SESSION['fname'];
+
+            print_r($_SESSION['fname']);
         }
 
     ?>
