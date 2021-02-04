@@ -16,9 +16,8 @@
         var_dump($_SESSION['fname']);
 
         if (isset($_SESSION['fname'])) {
-            foreach ($_SESSION['fname'] as $key => $value) {
-                echo $value;
-            }
+            
+            echo $_SESSION['fname'];
         }
 
     ?>
