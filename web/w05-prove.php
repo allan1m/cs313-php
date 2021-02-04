@@ -55,7 +55,7 @@
         
             foreach ($db->query('SELECT first_name FROM employee') as $row)
             {
-                $_SESSION['fname'] = $_POST['employee info'];
+                $_SESSION['fname'] = $row['first_name'];
             }
         }
     ?>
