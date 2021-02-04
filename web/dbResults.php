@@ -17,6 +17,7 @@
 
         if (isset($_SESSION['fname'])) {
             
+            
             echo $_SESSION['fname'];
         }
 
