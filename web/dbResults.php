@@ -13,7 +13,7 @@
 <body>
     <?php
 
-        var_dump($_SESSION['fname']);
+        //var_dump($_SESSION['fname']);
 
         if (isset($_SESSION['fname'])) {
             
