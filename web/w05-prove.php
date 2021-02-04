@@ -23,7 +23,7 @@
 
     <?php
 
-        $_SESSION['fname'];
+        $_SESSION['fname'] = array();
         $_SESSION['lname'];
         $_SESSION['pnumber'];
         $_SESSION['address'];
@@ -53,7 +53,7 @@
             }
 
         
-            foreach ($db->query('SELECT first_name FROM employee') as $key => $value)
+            foreach ($db->query('SELECT first_name FROM employee') as $row)
             {
                 $_SESSION['fname'] = $_POST['employee info'];
             }
