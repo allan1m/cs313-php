@@ -23,7 +23,7 @@
 
     <?php
 
-        $_SESSION['fname'];
+        
         $_SESSION['lname'];
         $_SESSION['pnumber'];
         $_SESSION['address'];
