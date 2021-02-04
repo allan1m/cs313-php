@@ -17,8 +17,8 @@
         echo "PRINT R: " . print_r($_SESSION['fname']) . "<br>";
 
         if (isset($_SESSION['fname'])) {
-            foreach ($_SESSION['fname'] as $row) {
-                echo $row;
+            foreach ($_SESSION['fname'] as $row => $value) {
+                echo $value;
             }
         }
 
