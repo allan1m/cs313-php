@@ -11,6 +11,8 @@
     <title>DB Results</title>
 </head>
 <body>
+
+<a href="w05-prove.php">Results</a>
     <?php
 
         echo "VAR DUMP: " . var_dump($_SESSION['fname']) . "<br>";
@@ -21,10 +23,8 @@
                 echo $value . "<br>";
             }
         }
-        if (empty($_SESSION['fname'])) {
-            if (isset($_SESSION['fname'])) {
-                unset($_SESSION['fname']);
-            }
+        if (!isset($_SESSION['fname'])) {
+            unset($_SESSION['fname']);
         }
 
         if (isset($_SESSION['date'])) {
