@@ -56,10 +56,10 @@
         
             foreach ($db->query('SELECT first_name FROM employee') as $row_fnam)
             {
-                foreach ($db->query('SELECT last_name FROM employee') as $row_lname) {
-                    $_SESSION['fname'][] = $row_fname['first_name'];
-                    $_SESSION['lname'][] = $row_lname['last_name'];
-                }
+                $_SESSION['fname'][] = $row_fname['first_name'];
+            }
+            foreach ($db->query('SELECT last_name FROM employee') as $row_lname) {
+                $_SESSION['lname'][] = $row_lname['last_name'];
             }
         }
 
