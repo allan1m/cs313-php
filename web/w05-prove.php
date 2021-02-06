@@ -22,13 +22,6 @@
     </form>
 
     <?php
-
-        
-        $_SESSION['lname'];
-        $_SESSION['pnumber'];
-        $_SESSION['address'];
-
-
         if (isset($_POST['employee_n'])) {
             try
             {
@@ -85,12 +78,9 @@
             }
 
         
-            foreach ($db->query('SELECT work_date, start_work_time, end_work_time FROM schedule') as $row) {
+            foreach ($db->query('SELECT work_date FROM schedule') as $row) {
                     {
-                        echo 'Date: ' . $row['work_date'];
-                        echo 'Start Time: ' . $row['start_work_time'];
-                        echo 'End Time: ' . $row['end_work_time'];
-                        echo '<br/>';
+                        $_SESSION['date'][] = $row['work_date'];
                     }
                 }
         }
