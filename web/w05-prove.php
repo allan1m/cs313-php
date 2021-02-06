@@ -16,6 +16,7 @@
     <a href="dbResults.php">Results</a>
     
     <form action="" method="post">
+        <input type="radio" name="employee_n" id="employee_n"><label for="employee_n">Employee</label> <br>
         <input type="radio" name="employee_info" id="employee_info"><label for="employee_info">Employee</label> <br>
         <input type="radio" name="schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
@@ -29,7 +30,37 @@
         $_SESSION['address'];
 
 
-        if (isset($_POST['employee_info'])) {
+        if (isset($_POST['employee_n'])) {
+            try
+            {
+                $dbUrl = getenv('DATABASE_URL');
+        
+                $dbOpts = parse_url($dbUrl);
+        
+                $dbHost = $dbOpts["host"];
+                $dbPort = $dbOpts["port"];
+                $dbUser = $dbOpts["user"];                                  
+                $dbPassword = $dbOpts["pass"];
+                $dbName = ltrim($dbOpts["path"],'/');
+        
+                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+        
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            }
+            catch (PDOException $ex)
+            {
+                echo 'Error!: ' . $ex->getMessage();
+                die();
+            }
+
+        
+            foreach ($db->query('SELECT last_name, first_name FROM employee') as $row)
+            {
+                $_SESSION['fname'][] = $row['first_name'];
+            }
+        }
+
+        /*if (isset($_POST['employee_info'])) {
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
@@ -57,7 +88,7 @@
             {
                 $_SESSION['fname'][] = $row['first_name'];
             }
-        }
+        }*/
     ?>
     <?php
 
