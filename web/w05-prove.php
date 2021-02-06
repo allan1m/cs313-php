@@ -56,7 +56,7 @@
         
             foreach ($db->query('SELECT first_name, last_name FROM employee') as $row)
             {
-                $_SESSION['fname'][] = $row['first_name'];
+                $_SESSION['fname'][] = $row['first_name'] + $row['last_name'];
                 $_SESSION['lname'][] = $row['last_name'];
             }
         }
