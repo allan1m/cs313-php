@@ -21,6 +21,11 @@
                 echo $value . "<br>";
             }
         }
+        if (empty($_SESSION['fname'])) {
+            if (isset($_SESSION['fname'])) {
+                unset($_SESSION['fname']);
+            }
+        }
 
         if (isset($_SESSION['date'])) {
             echo "The following dates indicated when business was operating: <br>";
