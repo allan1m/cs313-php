@@ -19,9 +19,9 @@
         if (isset($_SESSION['fname']) || isset($_SESSION['lname'])) {
             foreach ($_SESSION['fname'] as $key_one => $value_one) {
                 echo $value_one;
-            }
-            foreach ($_SESSION['lname'] as $key_one => $value_two) {
-                echo $value_two;
+                foreach ($_SESSION['lname'] as $key_one => $value_two) {
+                    echo $value_two . "<br>";
+                }
             }
         }
 
