@@ -13,7 +13,7 @@
 <body>
     What would you like to do?
 
-    <a href="dbResults.php">Results</a>
+    <a href="dbResults.php">Go To Results</a>
     
     <form action="" method="post">
         <input type="radio" name="employee_n" id="employee_n"><label for="employee_n">Employee</label> <br>

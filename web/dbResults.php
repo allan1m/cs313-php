@@ -12,19 +12,13 @@
 </head>
 <body>
 
-<a href="w05-prove.php">Results</a>
+<a href="w05-prove.php">Query selection</a>
     <?php
-
-        echo "VAR DUMP: " . var_dump($_SESSION['fname']) . "<br>";
-        echo "PRINT R: " . print_r($_SESSION['fname']) . "<br>";
         if (isset($_SESSION['fname']) || isset($_SESSION['lname'])) {
             echo "The following is a list of employees: <br>";
             foreach ($_SESSION['fname'] as $key_one => $value) {
                 echo $value . "<br>";
             }
-        }
-        if (!isset($_SESSION['fname'])) {
-            unset($_SESSION['fname']);
         }
 
         if (isset($_SESSION['date'])) {
