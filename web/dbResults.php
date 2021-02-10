@@ -16,8 +16,11 @@
     <?php
         if (isset($_SESSION['fname'])) {
             echo "Employees: <br>";
-            while (!empty($_SESSION['fname'] && !empty($_SESSION['lname']))) {
-                echo $_SESSION['fname'] . $_SESSION['lname'] . "<br>";
+            foreach ($_SESSION['fname'] as $key_one => $value) {
+                echo $value . "<br>";
+            }
+            foreach ($_SESSION['lname'] as $key => $value) {
+                echo $value . "<br>";
             }
         }
     ?>
