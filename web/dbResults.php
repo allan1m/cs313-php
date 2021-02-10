@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="dbresults.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DB Results</title>
@@ -12,15 +13,15 @@
 
 <a href="w05-prove.php">Query selection</a>
 
-<div class="employee_info">
+<div class="wrapper">
     <?php
         if (isset($_SESSION['fname'])) {
             echo "Employees: <br>";
             foreach ($_SESSION['fname'] as $key_one => $value) {
-                echo $value . "<br>";
+                echo "<div id='block1'>" . $value . "<br></div>";
             }
             foreach ($_SESSION['lname'] as $key => $value) {
-                echo $value . "<br>";
+                echo "<div id='block2'>" . $value . "<br></div>";
             }
         }
     ?>
