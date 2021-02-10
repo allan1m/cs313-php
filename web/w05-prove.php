@@ -20,7 +20,7 @@
     </form>
 
     <?php
-        if (isset($_POST['employee_n'])) {
+        if (empty($_SESSION['fname']) && isset($_POST['employee_n'])) {
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
