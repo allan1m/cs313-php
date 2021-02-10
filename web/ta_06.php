@@ -37,8 +37,8 @@
             echo 'Error!: ' . $ex->getMessage();
             die();
         }
-        
-        foreach ($db->query('SELECT book, chapter, verse, content password FROM scriptures') as $row)
+
+        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
         {
             echo 'Book: ' . $row['book'];
             echo 'Chapter: ' . $row['chapter'];
