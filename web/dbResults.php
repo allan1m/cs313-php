@@ -17,12 +17,17 @@
     <?php
         if (isset($_SESSION['fname'])) {
             echo "Employees: <br>";
+            echo "<div id='block1'>";
             foreach ($_SESSION['fname'] as $key_one => $value) {
-                echo "<div id='block1'>" . $value . "<br></div>";
+                echo $value . "<br>";
             }
+            echo "</div>";
+            
+            echo "<div id='block2'>";
             foreach ($_SESSION['lname'] as $key => $value) {
-                echo "<div id='block2'>" . $value . "<br></div>";
+                echo $value . "<br>";
             }
+            echo "</div>";
         }
     ?>
 </div>
