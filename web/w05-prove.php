@@ -44,15 +44,8 @@
             }
 
         
-            /*foreach ($db->query('SELECT first_name FROM employee') as $row)
+            foreach ($db->query('SELECT first_name, last_name FROM employee') as $row)
             {
-                $_SESSION['fname'][] = $row['first_name'];
-            }*/
-
-            $statement = $db->prepare("SELECT first_name, last_name FROM employee");
-            $statement->executed;
-
-            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $_SESSION['fname'][] = $row['first_name'];
                 $_SESSION['lname'][] = $row['last_name'];
             }
