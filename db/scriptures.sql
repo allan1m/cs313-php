@@ -10,4 +10,4 @@ INSERT INTO scriptures (book, chapter, verse, content) VALUES ('New Testament', 
 
 INSERT INTO scriptures (book, chapter, verse, content) VALUES ('D&C',  '23', 1, 'He that akeepeth his commandments receiveth btruth and clight, until he is glorified in truth and dknoweth all things.');
 
-INSERT INTO scriptures (book, chapter, verse, content) VALUES ('D&C',  '88', 49, 'The alight shineth in darkness, and the darkness comprehendeth it not; nevertheless, the day shall come when you shall bcomprehend even God, being quickened in him and by him.');
+INSERT INTO scriptures (book, chapter, verse, content) VALUES ('D&C',  '88', 49, 'The alight shineth in darkness, and the darkness comprehendeth it not; nevertheless, the day shall come when you shall be comprehend even God, being quickened in him and by him.');
