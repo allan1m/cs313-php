@@ -52,7 +52,7 @@
     ?>
     <?php
 
-        if (empty([$_SESSION['date']]) && isset($_POST['schedule'])) {
+        if (!empty([$_SESSION['date']]) && isset($_POST['schedule'])) {
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
