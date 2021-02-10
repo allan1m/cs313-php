@@ -1,7 +1,5 @@
 <?php
-
     session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +44,7 @@
             }
 
         
-            foreach ($db->query('SELECT first_name, last_name FROM employee') as $row)
+            foreach ($db->query('SELECT first_name FROM employee') as $row)
             {
                 $_SESSION['fname'][] = $row['first_name'];
             }

@@ -1,7 +1,5 @@
 <?php
-
     session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,14 +11,19 @@
 <body>
 
 <a href="w05-prove.php">Query selection</a>
+
+<div>
     <?php
-        if (isset($_SESSION['fname']) || isset($_SESSION['lname'])) {
+        if (isset($_SESSION['fname'])) {
             echo "The following is a list of employees: <br>";
             foreach ($_SESSION['fname'] as $key_one => $value) {
                 echo $value . "<br>";
             }
         }
-
+    ?>
+</div>
+<div>
+    <?php
         if (isset($_SESSION['date'])) {
             echo "The following dates indicated when business was operating: <br>";
             foreach ($_SESSION['date'] as $key_one => $value) {
@@ -29,5 +32,6 @@
         }
 
     ?>
+</div>
 </body>
 </html>

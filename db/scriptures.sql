@@ -1,5 +1,5 @@
 CREATE TABLE scriptures(
-id SERIAL NOT NULL,
+id SERIAL NOT NULL PRIMARY KEY,
 book CHAR(255),
 chapter CHAR(255),
 verse INT,
