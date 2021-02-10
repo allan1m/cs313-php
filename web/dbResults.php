@@ -12,20 +12,20 @@
 
 <a href="w05-prove.php">Query selection</a>
 
-<div>
+<div class="employee_info">
     <?php
         if (isset($_SESSION['fname'])) {
-            echo "The following is a list of employees: <br>";
+            echo "Employees: <br>";
             foreach ($_SESSION['fname'] as $key_one => $value) {
                 echo $value . "<br>";
             }
         }
     ?>
 </div>
-<div>
+<div class="employee_schedule">
     <?php
         if (isset($_SESSION['date'])) {
-            echo "The following dates indicated when business was operating: <br>";
+            echo "Dates worked: <br>";
             foreach ($_SESSION['date'] as $key_one => $value) {
                 echo $value . "<br>";
             }
