@@ -24,6 +24,7 @@
 </div>
 <div>
     <?php
+        var_dump($_SESSION['date']);
         if (isset($_SESSION['date'])) {
             echo "The following dates indicated when business was operating: <br>";
             foreach ($_SESSION['date'] as $key_one => $value) {
