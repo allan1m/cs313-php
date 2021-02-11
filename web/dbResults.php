@@ -70,8 +70,8 @@
         require "dbConnect.php";
         $db = get_db();
         try{
-            $sql = 'INSERT INTO employee(last_name, first_name, address, phone_number) VALUES(:last_name, :first_name, :address, :phone_number)';
-            $stmt = $db->prepare($sql);
+            $query = 'INSERT INTO employee(last_name, first_name, address, phone_number) VALUES(:last_name, :first_name, :address, :phone_number)';
+            $stmt = $db->prepare($query);
 
             $stmt->bindValue(':last_name', $lname);
             $stmt->bindValue(':first_name', $fname);
