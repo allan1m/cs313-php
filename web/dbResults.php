@@ -14,7 +14,7 @@
 <a href="w05-prove.php">Query selection</a>
 
     <?php
-        echo "<h2>Employees</h2>: <br>";
+        echo "Employees: <br>";
         echo "<div class='wrapper'>";
         if (isset($_SESSION['fname'])) {
             echo "Employees: <br>";
@@ -33,7 +33,7 @@
         echo "</div>";
     ?>
     <?php
-        echo "<h2>Dates worked</h2>: <br>";
+        echo "Dates worked: <br>";
         echo "<div class='wrapper2'>";
         if (isset($_SESSION['date'])) {
             foreach ($_SESSION['date'] as $key_one => $value) {
