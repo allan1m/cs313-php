@@ -57,14 +57,20 @@
     if (!empty($_POST['employeeName'])) {
         require "dbConnect.php";
         $db = get_db();
-        $sql = 'INSERT INTO employee(first_name) VALUES(:first_name)';
-        $stmt = $db->prepare($sql);
+        try{
+            $sql = 'INSERT INTO employee(first_name) VALUES(:first_name)';
+            $stmt = $db->prepare($sql);
 
-        $stmt->bindValue(':first_name', $employeeName);
+            $stmt->bindValue(':first_name', $employeeName);
 
-        $stmt->execute();
+            $stmt->execute();
 
-        $newId = $pdo->lastInsertId('employee_id_seq');
+            $newId = $pdo->lastInsertId('employee_id_seq');
+        }
+        catch(Exception $ex){
+            echo "Error with DB. Details: $ex";
+	        die();
+        }
         
     }
     
