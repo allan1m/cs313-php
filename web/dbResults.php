@@ -58,7 +58,7 @@
         require "dbConnect.php";
         $db = get_db();
         try{
-            $sql = 'INSERT INTO employee(first_name) VALUES(:first_name)';
+            $sql = 'INSERT INTO employee(last_name, first_name, address, phone_number) VALUES(:last_name, :first_name, :address, :phone_number)';
             $stmt = $db->prepare($sql);
 
             $stmt->bindValue(':first_name', $employee_Name);
