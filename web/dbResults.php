@@ -43,6 +43,12 @@
     echo "</div>";
 
 ?>
+
+<form action="" method="post">
+    <input type="hidden" name="name_id" value="name_id">
+	<textarea name="name_content"></textarea>
+	<input type="submit" value="Create Note">
+</form>
 </div>
 </body>
 </html>
