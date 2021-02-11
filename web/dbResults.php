@@ -61,7 +61,7 @@
             $sql = 'INSERT INTO employee(first_name) VALUES(:first_name)';
             $stmt = $db->prepare($sql);
 
-            $stmt->bindValue(':first_name', $employeeName);
+            $stmt->bindValue(':first_name', $employee_Name);
 
             $stmt->execute();
 
