@@ -44,11 +44,35 @@
 
 ?>
 
-<form action="" method="post">
-    <input type="hidden" name="name_id" value="name_id">
-	<textarea name="name_content"></textarea>
-	<input type="submit" value="Create Note">
+<form action="insertName.php" method="post">
+    <input type="text" id="employeeName" name="employeeName"></input>
+	<label for="employeeName">Book</label>
+	<br /><br />
+    <input type="submit" value="Add to Database" />
 </form>
+<?php
+
+    if (!empty($_POST['employeeName'])) {
+        require "dbConnect.php";
+        $db = get_db();
+        try{
+            $query = 'INSERT INTO employee(first_name) VALUES(:first_name)';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':book', $book);
+            $statement->execute();
+
+            $employee_id = $db->lastInsertId("employee_id_seq");
+        }
+        catch (Exception $ex)
+        {
+	        echo "Error with DB. Details: $ex";
+	        die();
+        }
+        
+    }
+    
+
+?>
 </div>
 </body>
 </html>
