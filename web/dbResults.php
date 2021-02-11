@@ -10,38 +10,39 @@
     <title>DB Results</title>
 </head>
 <body>
+<div>
+    <a href="w05-prove.php">Query selection</a>
+</div>
 
-<a href="w05-prove.php">Query selection</a>
-
-    <?php
-        echo "<div class='wrapper'>";
-        if (isset($_SESSION['fname'])) {
-            echo "Employees: <br>";
-            echo "<div id='block1'>";
-            foreach ($_SESSION['fname'] as $key_one => $value) {
-                echo $value . " " . "<br>";
-            }
-            echo "</div>";
+<?php
+    echo "<div class='wrapper'>";
+    if (isset($_SESSION['fname'])) {
+        echo "Employees: <br>";
+        echo "<div id='block1'>";
+        foreach ($_SESSION['fname'] as $key_one => $value) {
+            echo $value . " " . "<br>";
+        }
+        echo "</div>";
             
-            echo "<div id='block2'>";
-            foreach ($_SESSION['lname'] as $key => $value) {
-                echo " " . $value . "<br>";
-            }
-            echo "</div>";
+        echo "<div id='block2'>";
+        foreach ($_SESSION['lname'] as $key => $value) {
+            echo " " . $value . "<br>";
         }
         echo "</div>";
-    ?>
-    <?php
-        echo "<div class='wrapper2'>";
-        if (isset($_SESSION['date'])) {
-            echo "Dates worked: <br>";
-            foreach ($_SESSION['date'] as $key_one => $value) {
-                echo $value . "<br>";
-            }
         }
-        echo "</div>";
+    echo "</div>";
+?>
+<?php
+    echo "<div class='wrapper2'>";
+    if (isset($_SESSION['date'])) {
+        echo "Dates worked: <br>";
+        foreach ($_SESSION['date'] as $key_one => $value) {
+            echo $value . "<br>";
+        }
+    }
+    echo "</div>";
 
-    ?>
+?>
 </div>
 </body>
 </html>
