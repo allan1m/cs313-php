@@ -52,13 +52,15 @@
 </form>
 <?php
 
+    $employee_name = $_POST['employeeName'];
+
     if (!empty($_POST['employeeName'])) {
         require "dbConnect.php";
         $db = get_db();
         try{
             $query = 'INSERT INTO employee(first_name) VALUES(:first_name)';
             $statement = $db->prepare($query);
-            $statement->bindValue(':book', $book);
+            $statement->bindValue(':first_name', $employee_name);
             $statement->execute();
 
             $employee_id = $db->lastInsertId("employee_id_seq");
