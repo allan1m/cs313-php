@@ -13,8 +13,9 @@
 
 <a href="w05-prove.php">Query selection</a>
 
-<div class="wrapper">
     <?php
+        echo "Employees: <br>";
+        echo "<div class='wrapper'>";
         if (isset($_SESSION['fname'])) {
             echo "Employees: <br>";
             echo "<div id='block1'>";
@@ -29,9 +30,10 @@
             }
             echo "</div>";
         }
+        echo "</div>";
     ?>
 </div>
-<div class="employee_schedule">
+<div class="wrapper2">
     <?php
         if (isset($_SESSION['date'])) {
             echo "Dates worked: <br>";
