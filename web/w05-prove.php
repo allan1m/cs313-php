@@ -1,6 +1,5 @@
 <?php
     require "employeeNames.php";
-    require "employeeSchedules.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

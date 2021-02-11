@@ -13,4 +13,13 @@ if (empty($_SESSION['fname']) && isset($_POST['employee_n'])) {
     }
 }
 
+if (empty($_SESSION['date']) && isset($_POST['schedule'])) {
+                   
+    foreach ($db->query('SELECT work_date FROM schedule') as $row) {
+            {
+                $_SESSION['date'][] = $row['work_date'];
+            }
+        }
+}
+
 ?>
