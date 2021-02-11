@@ -57,18 +57,14 @@
     if (!empty($_POST['employeeName'])) {
         require "dbConnect.php";
         $db = get_db();
-        try{
-           $stmt = $db->prepare('INSERT INTO employee(first_name) VALUE (:first_name)');
-           $stmt->bindValue(':first_name', $employeeName, PDO::PARAM_STR);
-           $stmt->execute();
+        $sql = 'INSERT INTO employee(first_name) VALUES(:first_name)';
+        $stmt = $db->prepare($sql);
 
-            $employee_id = $db->lastInsertId("employee_id_seq");
-        }
-        catch (Exception $ex)
-        {
-	        echo "Error with DB. Details: $ex";
-	        die();
-        }
+        $stmt->bindValue(':first_name', $employeeName);
+
+        $stmt->execute();
+
+        $newId = $pdo->lastInsertId('employee_id_seq');
         
     }
     
