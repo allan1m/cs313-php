@@ -42,7 +42,7 @@
                 echo 'Error!: ' . $ex->getMessage();
                 die();
             }
-
+            
         
             foreach ($db->query('SELECT first_name, last_name FROM employee') as $row)
             {

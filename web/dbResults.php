@@ -19,13 +19,13 @@
             echo "Employees: <br>";
             echo "<div id='block1'>";
             foreach ($_SESSION['fname'] as $key_one => $value) {
-                echo $value . "<br>";
+                echo $value . " " . "<br>";
             }
             echo "</div>";
             
             echo "<div id='block2'>";
             foreach ($_SESSION['lname'] as $key => $value) {
-                echo $value . "<br>";
+                echo " " . $value . "<br>";
             }
             echo "</div>";
         }
