@@ -52,9 +52,9 @@
 </form>
 <?php
 
-    $employee_name = $_POST['employeeName'];
 
     if (!empty($_POST['employeeName'])) {
+        $employee_name = $_POST['employeeName'];
         require "dbConnect.php";
         $db = get_db();
         try{
