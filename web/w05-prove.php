@@ -1,8 +1,8 @@
 <?php
     session_start();
-    
-    require ('employeeNames.php');
-    require ('employeeSchedules.php');
+
+    require 'employeeNames.php';
+    require 'employeeSchedules.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
