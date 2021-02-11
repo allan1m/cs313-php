@@ -44,7 +44,7 @@
 
 ?>
 
-<form action="insertName.php" method="post">
+<form action="" method="post">
     <input type="text" id="employeeName" name="employeeName"></input>
 	<label for="employeeName">Book</label>
 	<br /><br />
