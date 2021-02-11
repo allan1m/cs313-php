@@ -58,10 +58,9 @@
         require "dbConnect.php";
         $db = get_db();
         try{
-            $query = 'INSERT INTO employee(first_name) VALUES(:first_name)';
-            $statement = $db->prepare($query);
-            $statement->bindValue(':first_name', $employee_name);
-            $statement->execute();
+           $stmt = $db->prepare('INSERT INTO employee(first_name) VALUE (:first_name);');
+           $stmt->bindValue(':first_name', $employeeName, PDO::PARAM_STR);
+           $stmt->execute();
 
             $employee_id = $db->lastInsertId("employee_id_seq");
         }
