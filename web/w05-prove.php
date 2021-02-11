@@ -1,5 +1,8 @@
 <?php
     session_start();
+    
+    require ('employeeNames.php');
+    require ('employeeSchedules.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,71 +21,5 @@
         <input type="radio" name="schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
     </form>
-
-    <?php
-        if (empty($_SESSION['fname']) && isset($_POST['employee_n'])) {
-            try
-            {
-                $dbUrl = getenv('DATABASE_URL');
-        
-                $dbOpts = parse_url($dbUrl);
-        
-                $dbHost = $dbOpts["host"];
-                $dbPort = $dbOpts["port"];
-                $dbUser = $dbOpts["user"];                                  
-                $dbPassword = $dbOpts["pass"];
-                $dbName = ltrim($dbOpts["path"],'/');
-        
-                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-        
-                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch (PDOException $ex)
-            {
-                echo 'Error!: ' . $ex->getMessage();
-                die();
-            }
-            
-        
-            foreach ($db->query('SELECT first_name, last_name FROM employee') as $row)
-            {
-                $_SESSION['fname'][] = $row['first_name'];
-                $_SESSION['lname'][] = $row['last_name'];
-            }
-        }
-    ?>
-    <?php
-
-        if (empty($_SESSION['date']) && isset($_POST['schedule'])) {
-            try
-            {
-                $dbUrl = getenv('DATABASE_URL');
-        
-                $dbOpts = parse_url($dbUrl);
-        
-                $dbHost = $dbOpts["host"];
-                $dbPort = $dbOpts["port"];
-                $dbUser = $dbOpts["user"];
-                $dbPassword = $dbOpts["pass"];
-                $dbName = ltrim($dbOpts["path"],'/');
-        
-                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-        
-                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch (PDOException $ex)
-            {
-                echo 'Error!: ' . $ex->getMessage();
-                die();
-            }
-
-        
-            foreach ($db->query('SELECT work_date FROM schedule') as $row) {
-                    {
-                        $_SESSION['date'][] = $row['work_date'];
-                    }
-                }
-        }
-    ?>
 </body>
 </html>
