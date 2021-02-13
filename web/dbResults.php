@@ -69,23 +69,19 @@
         $phnumber = $_POST['phnumber'];
         require "dbConnect.php";
         $db = get_db();
-        try{
             $query = 'INSERT INTO employee(last_name, first_name, address, phone_number) VALUES(:last_name, :first_name, :address, :phone_number)';
-            $stmt = $db->prepare($query);
+            
+            $result = pg_query($db, $sql);
+            //$stmt = $db->prepare($query);
 
-            $stmt->bindValue(':last_name', $lname);
+            /*$stmt->bindValue(':last_name', $lname);
             $stmt->bindValue(':first_name', $fname);
             $stmt->bindValue(':address', $address);
             $stmt->bindValue(':phone_number', $phnumber);
 
-            $stmt->execute();
+            $stmt->execute();*/
 
             $newId = $pdo->lastInsertId('employee_id_seq');
-        }
-        catch(Exception $ex){
-            echo "Error with DB. Details: $ex";
-	        die();
-        }
         
     }
     
