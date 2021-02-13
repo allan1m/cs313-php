@@ -63,25 +63,34 @@
 
 
     if ($_SERVER['REQUREST_METHOD'] == 'POST') {
+        echo 'if statement';
         $lname = $_POST['lname'];
         $fname = $_POST['fname'];
         $address = $_POST['address'];
         $phnumber = $_POST['phnumber'];
         require "dbConnect.php";
         $db = get_db();
+        try{
+            echo 'try statement';
             $query = 'INSERT INTO employee(last_name, first_name, address, phone_number) VALUES(:last_name, :first_name, :address, :phone_number)';
-            
-            $result = pg_query($db, $sql);
-            //$stmt = $db->prepare($query);
+            $stmt = $db->prepare($query);
+            echo 'insert statement';
 
-            /*$stmt->bindValue(':last_name', $lname);
+            $stmt->bindValue(':last_name', $lname);
             $stmt->bindValue(':first_name', $fname);
             $stmt->bindValue(':address', $address);
             $stmt->bindValue(':phone_number', $phnumber);
+            echo 'bindValue';
 
-            $stmt->execute();*/
+            $stmt->execute();
+            echo 'execute';
 
             $newId = $pdo->lastInsertId('employee_id_seq');
+        }
+        catch(Exception $ex){
+            echo "Error with DB. Details: $ex";
+	        die();
+        }
         
     }
     
