@@ -62,7 +62,7 @@
 <?php
 
 
-    if ($_SERVER['REQUREST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo 'if statement';
         $lname = $_POST['lname'];
         $fname = $_POST['fname'];
