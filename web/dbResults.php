@@ -23,7 +23,7 @@
         
         echo "Employees: <br>";
         echo "<div id='block1'>";
-        
+
         while ($i < $arrayCount) {
             echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['id'][$i] . '"><label for="">' . $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '</label><br>';
             $i++;
@@ -72,7 +72,6 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        echo 'if statement';
         $lname = $_POST['lname'];
         $fname = $_POST['fname'];
         $address = $_POST['address'];
@@ -80,21 +79,18 @@
         require "dbConnect.php";
         $db = get_db();
         try{
-            echo 'try statement';
             $query = 'INSERT INTO employee(last_name, first_name, address, phone_number) VALUES(:last_name, :first_name, :address, :phone_number)';
             $stmt = $db->prepare($query);
-            echo 'insert statement';
 
             $stmt->bindValue(':last_name', $lname);
             $stmt->bindValue(':first_name', $fname);
             $stmt->bindValue(':address', $address);
             $stmt->bindValue(':phone_number', $phnumber);
-            echo 'bindValue';
-
             $stmt->execute();
-            echo 'execute';
 
             $newId = $pdo->lastInsertId('employee_id_seq');
+
+            echo '<script>alert("Welcome to Geeks for Geeks")</script>';
         }
         catch(Exception $ex){
             echo "Error with DB. Details: $ex";
