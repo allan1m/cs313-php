@@ -67,7 +67,6 @@
 	<label for="phnumber">Book</label>
 	<br /><br />
     <input type="submit" value="Add to Database" />
-    <script>alert('Successful')</script>
 </form>
 <?php
 
