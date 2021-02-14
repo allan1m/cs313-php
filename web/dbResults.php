@@ -23,7 +23,7 @@
         $arrayLength = $_SESSION['fname'];
         echo "Employees: <br>";
         echo "<div id='block1'>";
-        while ($i > $arrayLength) {
+        while ($i < $arrayLength) {
             echo "inside while loop";
             echo $arrayLength[$i];
             $i++;
