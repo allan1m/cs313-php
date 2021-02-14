@@ -20,13 +20,12 @@
     if (isset($_SESSION['fname'])) {
         echo "inside first if statement";
         $i = 0;
-        $sfname = $_SESSION['fname'];
-        $counter = count($sfname);
+        $arrayLength = $_SESSION['fname'];
         echo "Employees: <br>";
         echo "<div id='block1'>";
-        while ($i >= $length) {
+        while ($i > $arrayLength) {
             echo "inside while loop";
-            echo $sfname[$i];
+            echo $arrayLength[$i];
             $i++;
         }
         /*foreach ($_SESSION['fname'] as $key_one => $value) {
