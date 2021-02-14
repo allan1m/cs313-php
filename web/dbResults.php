@@ -13,7 +13,6 @@
 <div>
     <a href="w05-prove.php">Query selection</a>
 </div>
-<input type="checkbox" name="" id=""><label for="">$value</label>
 
 <?php
     echo "<div class='wrapper'>";
