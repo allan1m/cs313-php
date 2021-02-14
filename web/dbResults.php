@@ -20,7 +20,8 @@
     if (isset($_SESSION['fname'])) {
         echo "inside first if statement";
         $i = 0;
-        $arrayLength = $_SESSION['fname'];
+        $arrayLength = count($_SESSION['fname']);
+        echo $arrayLength;
         echo "Employees: <br>";
         echo "<div id='block1'>";
         while ($i < $arrayLength) {
