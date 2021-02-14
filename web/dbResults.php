@@ -26,7 +26,7 @@
         echo "<div id='block1'>";
         while ($i < $arrayLength) {
             echo "inside while loop <br>";
-            echo '<input type="checkbox" name="" id=""><label for="">$_SESSION["fname"][$i] </label>' . "<br>";
+            echo '<input type="checkbox" name="" id=""><label for="">' . $_SESSION["fname"][$i] . '</label>' . "<br>";
             $i++;
         }
         /*foreach ($_SESSION['fname'] as $key_one => $value) {
