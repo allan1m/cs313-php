@@ -17,6 +17,7 @@
 <?php
     echo "<div class='container'>";
         if (isset($_SESSION['fname'])) {
+            echo "inside if";
             $i = 0;
             $arrayCount = count($_SESSION['fname']);
         
@@ -24,10 +25,12 @@
             echo "<div id='item>";
 
             while ($i < $arrayCount) {
+                echo "inside while";
                 echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['id'][$i] . '"><label for="">' . $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '</label><br>';
                 $i++;
             }
             echo "</div>";
+            echo "end if";
         }
     
     
