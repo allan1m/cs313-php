@@ -38,7 +38,7 @@ if (empty($_SESSION['phone_number']) && isset($_POST['employee_phoneNumber'])) {
 
 if (empty($_SESSION['date']) && isset($_POST['work_date'])) {
                    
-    foreach ($db->query('SELECT id, work_date, start_work_time, end_work_time, employee_id FROM schedule') as $row) {
+    foreach ($db->query('SELECT id, work_date, employee_id FROM schedule') as $row) {
             {
                 $_SESSION['schedule_id'][] = $row['id'];
                 $_SESSION['work_date'][] = $row['work_date'];
@@ -49,11 +49,11 @@ if (empty($_SESSION['date']) && isset($_POST['work_date'])) {
 
 if (empty($_SESSION['employee_shift']) && isset($_POST['employee_shift'])) {
                    
-    foreach ($db->query('SELECT id, work_date, start_work_time, end_work_time, employee_id FROM schedule') as $row) {
+    foreach ($db->query('SELECT id, start_work_time, end_work_time, employee_id FROM schedule') as $row) {
             {
                 $_SESSION['shift_id'][] = $row['id'];
-                $_SESSION['start_work_time'][] = $row['start_work_time'];
-                $_SESSION['end_work_time'][] = $row['end_work_time'];
+                $_SESSION['start_time'][] = $row['start_work_time'];
+                $_SESSION['end_time'][] = $row['end_work_time'];
                 $_SESSION['employee_id'][] = $row['employee_id'];
             }
         }
