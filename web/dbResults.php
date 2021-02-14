@@ -30,8 +30,41 @@
             echo "</div>";
             }
     echo "</div>";
-
+    
     echo "<div class='wrapper2'>";
+    if (isset($_SESSION['address'])) {
+        $i = 0;
+        $arrayCount = count($_SESSION['address']);
+    
+        echo "Employees: <br>";
+        echo "<div id='block1'>";
+
+        while ($i < $arrayCount) {
+            echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['address_id'][$i] . '"><label for="">' . $_SESSION["address"][$i] . '</label><br>';
+            $i++;
+        }
+        echo "</div>";
+        }
+    echo "</div>";
+
+    echo "<div class='wrapper3'>";
+    if (isset($_SESSION['phone_number'])) {
+        $i = 0;
+        $arrayCount = count($_SESSION['phone_number']);
+    
+        echo "Employees: <br>";
+        echo "<div id='block1'>";
+
+        while ($i < $arrayCount) {
+            echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['phone_number_id'][$i] . '"><label for="">' . $_SESSION["phone_number"][$i] . '</label><br>';
+            $i++;
+        }
+        echo "</div>";
+        }
+    echo "</div>";
+
+
+    echo "<div class='wrapper4'>";
         if (isset($_SESSION['work_date'])) {
             $i=0;
             $arrayCount = count($_SESSION['work_date']);
@@ -42,6 +75,22 @@
                 echo '<input type="checkbox" name="work_date" id="' . $_SESSION['employee_id'][$i] . '"><label for="">' . $_SESSION["work_date"][$i] . '</label><br>';
                 $i++;
             }
+        }
+    echo "</div>";
+
+    echo "<div class='wrapper5'>";
+    if (isset($_SESSION['employee_shift'])) {
+        $i = 0;
+        $arrayCount = count($_SESSION['address']);
+    
+        echo "Employees: <br>";
+        echo "<div id='block1'>";
+
+        while ($i < $arrayCount) {
+            echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['shift_id'][$i] . '"><label for="">' . $_SESSION["start_time"][$i] . ' - ' . $_SESSION['end_time'] . '</label><br>';
+            $i++;
+        }
+        echo "</div>";
         }
     echo "</div>";
 

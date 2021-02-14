@@ -14,8 +14,11 @@
     <a href="dbResults.php">Go To Results</a>
     
     <form action="" method="post">
-        <input type="checkbox" name="employee_n" id="employee_n"><label for="employee_n">Employee</label> <br>
-        <input type="checkbox" name="schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
+        <input type="checkbox" name="employee_name" id="employee_n"><label for="employee_n">Employee Names</label> <br>
+        <input type="checkbox" name="employee_address" id="employee_address"><label for="employee_address">Employee Info</label> <br>
+        <input type="checkbox" name="employee_phoneNumber" id="employee_phoneNumber"><label for="employee_phoneNumber">Employee Info</label> <br>
+        <input type="checkbox" name="work_date" id="work_date"><label for="work_date">Employee schedule</label><br>
+        <input type="checkbox" name="employee_shift" id="employee_shift"><label for="employee_shift">Employee</label> <br>
         <input type="submit" value="submit" name="Submit">
     </form>
 </body>
