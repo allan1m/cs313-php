@@ -37,7 +37,7 @@
         $arrayCount = count($_SESSION['address']);
     
         echo "Address: <br>";
-        echo "<div id='block1'>";
+        echo "<div id='block2'>";
 
         while ($i < $arrayCount) {
             echo '<input type="checkbox" name="employee_address" id="' . $_SESSION['address_id'][$i] . '"><label for="">' . $_SESSION["address"][$i] . '</label><br>';
@@ -53,7 +53,7 @@
         $arrayCount = count($_SESSION['phone_number']);
     
         echo "Phone Number: <br>";
-        echo "<div id='block1'>";
+        echo "<div id='block3'>";
 
         while ($i < $arrayCount) {
             echo '<input type="checkbox" name="employee_phone_number" id="' . $_SESSION['phone_number_id'][$i] . '"><label for="">' . $_SESSION["phone_number"][$i] . '</label><br>';
