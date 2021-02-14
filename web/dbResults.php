@@ -39,7 +39,7 @@
         echo "<div id='item'>";
 
         while ($i < $arrayCount) {
-            echo '<input type="checkbox" name="employee_address" id="' . $_SESSION['address_id'][$i] . '"><label for="">' . $_SESSION["address"][$i] . '</label><br>';
+            echo $_SESSION["address"][$i] . '<br>';
             $i++;
         }
         echo "</div>";
@@ -54,7 +54,7 @@
         echo "<div id='item'>";
 
         while ($i < $arrayCount) {
-            echo '<input type="checkbox" name="employee_phone_number" id="' . $_SESSION['phone_number_id'][$i] . '"><label for="">' . $_SESSION["phone_number"][$i] . '</label><br>';
+            echo $_SESSION["phone_number"][$i] . '<br>';
             $i++;
         }
         echo "</div>";
@@ -70,7 +70,7 @@
             echo "<div id=item>";
 
             while ($i < $arrayCount) {
-                echo '<input type="checkbox" name="work_date" id="' . $_SESSION['employee_id'][$i] . '"><label for="">' . $_SESSION["work_date"][$i] . '</label><br>';
+                echo $_SESSION["work_date"][$i] . '<br>';
                 $i++;
             }
             echo "</div>";
@@ -85,7 +85,7 @@
         echo "<div id='item'>";
 
         while ($i < $arrayCount) {
-            echo '<input type="checkbox" name="employee_shift" id="' . $_SESSION['shift_id'][$i] . '"><label for="">' . $_SESSION["start_time"][$i] . ' - ' . $_SESSION['end_time'][$i] . '</label><br>';
+            echo $_SESSION["start_time"][$i] . ' - ' . $_SESSION['end_time'][$i] . '<br>';
             $i++;
         }
         echo "</div>";
