@@ -33,9 +33,9 @@
 ?>
 <?php
     echo "<div class='wrapper2'>";
-    if (isset($_SESSION['date'])) {
+    if (isset($_SESSION['work_date'])) {
         echo "Dates worked: <br>";
-        foreach ($_SESSION['date'] as $key_one => $value) {
+        foreach ($_SESSION['work_date'] as $key_one => $value) {
             echo $value . "<br>";
         }
     }
