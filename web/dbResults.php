@@ -67,6 +67,7 @@
 	<label for="phnumber">Book</label>
 	<br /><br />
     <input type="submit" value="Add to Database" />
+    <script>alert('Successful')</script>
 </form>
 <?php
 
@@ -90,9 +91,7 @@
 
             $newId = $pdo->lastInsertId('employee_id_seq');
 
-            echo '<script type="text/javascript">';
-            echo ' alert("JavaScript Alert Box by PHP")';  //not showing an alert box.
-            echo '</script>';
+            echo "<script language='javascript'>alert('Successful');</script>";
         }
         catch(Exception $ex){
             echo "Error with DB. Details: $ex";
