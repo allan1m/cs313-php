@@ -22,13 +22,12 @@
         $i = 0;
         $arrayCount = count($_SESSION['fname']);
         //$arrayCount2 = count($_SESSION['lname']);
-        //$arrayCount3 = count($_SESSION['id']);
         echo $arrayCount . "<br>";
         echo "Employees: <br>";
         echo "<div id='block1'>";
         while ($i < $arrayCount) {
             echo "inside while loop <br>";
-            echo '<input type="checkbox" name="" id=""><label for="">' . $_SESSION["fname"][$i] .  '</label><br>';
+            echo '<input type="checkbox" name="" id=""><label for="">' . $_SESSION["fname"][$i] .  $_SESSION['lname'][$i] . '</label><br>';
             $i++;
         }
         /*foreach ($_SESSION['fname'] as $key_one => $value) {
