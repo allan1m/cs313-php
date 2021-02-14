@@ -34,10 +34,18 @@
 <?php
     echo "<div class='wrapper2'>";
     if (isset($_SESSION['work_date'])) {
+        $i=0;
+        $arrayCount = count($_SESSION['work_date']);
+
         echo "Dates worked: <br>";
-        foreach ($_SESSION['work_date'] as $key_one => $value) {
-            echo $value . "<br>";
+
+        while ($i < $arrayCount) {
+            echo '<input type="checkbox" name="work_date" id="' . $_SESSION['employee_id'][$i] . '"><label for="">' . $_SESSION["work_date"][$i] . '</label><br>';
+            $i++;
         }
+        /*foreach ($_SESSION['work_date'] as $key_one => $value) {
+            echo $value . "<br>";
+        }*/
     }
     echo "</div>";
 
