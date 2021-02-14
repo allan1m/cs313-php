@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="insertDb.php">Add Employee</a>
+<a href="dbResults.php">Back to Results</a>
 <br>
 <form action="" method="post">
     <input type="text" id="lname" name="lname"></input>

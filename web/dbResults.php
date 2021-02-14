@@ -12,7 +12,7 @@
 <body>
 
     <a href="w05-prove.php">Home</a>
-    <a href="dbResults.php">Back to Results</a>
+    <a href="insertDb.php">Add Employee</a>
 
 <?php
 echo "<div class='container'>";
