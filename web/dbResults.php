@@ -59,7 +59,6 @@
         }
         echo "</div>";
         }
-    echo "</div>";
 
 
    
@@ -74,7 +73,7 @@
                 echo '<input type="checkbox" name="work_date" id="' . $_SESSION['employee_id'][$i] . '"><label for="">' . $_SESSION["work_date"][$i] . '</label><br>';
                 $i++;
             }
-            echo "</div>"
+            echo "</div>";
         }
 
     
