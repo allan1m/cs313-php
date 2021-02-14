@@ -26,7 +26,7 @@
         echo "<div id='block1'>";
         while ($i < $arrayLength) {
             echo "inside while loop";
-            echo $arrayLength[$i];
+            echo $_SESSION['fname'][$i];
             $i++;
         }
         /*foreach ($_SESSION['fname'] as $key_one => $value) {
