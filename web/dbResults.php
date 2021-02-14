@@ -16,36 +16,33 @@
 
 <?php
     echo "<div class='wrapper'>";
-    if (isset($_SESSION['fname'])) {
-        $i = 0;
-        $arrayCount = count($_SESSION['fname']);
+        if (isset($_SESSION['fname'])) {
+            $i = 0;
+            $arrayCount = count($_SESSION['fname']);
         
-        echo "Employees: <br>";
-        echo "<div id='block1'>";
+            echo "Employees: <br>";
+            echo "<div id='block1'>";
 
-        while ($i < $arrayCount) {
-            echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['id'][$i] . '"><label for="">' . $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '</label><br>';
-            $i++;
-        }
-        echo "</div>";
-        }
+            while ($i < $arrayCount) {
+                echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['id'][$i] . '"><label for="">' . $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '</label><br>';
+                $i++;
+            }
+            echo "</div>";
+            }
     echo "</div>";
-    
+
     echo "<div class='wrapper2'>";
-    if (isset($_SESSION['work_date'])) {
-        $i=0;
-        $arrayCount = count($_SESSION['work_date']);
+        if (isset($_SESSION['work_date'])) {
+            $i=0;
+            $arrayCount = count($_SESSION['work_date']);
 
-        echo "Dates worked: <br>";
+            echo "Dates worked: <br>";
 
-        while ($i < $arrayCount) {
-            echo '<input type="checkbox" name="work_date" id="' . $_SESSION['employee_id'][$i] . '"><label for="">' . $_SESSION["work_date"][$i] . '</label><br>';
-            $i++;
+            while ($i < $arrayCount) {
+                echo '<input type="checkbox" name="work_date" id="' . $_SESSION['employee_id'][$i] . '"><label for="">' . $_SESSION["work_date"][$i] . '</label><br>';
+                $i++;
+            }
         }
-        /*foreach ($_SESSION['work_date'] as $key_one => $value) {
-            echo $value . "<br>";
-        }*/
-    }
     echo "</div>";
 
 ?>
