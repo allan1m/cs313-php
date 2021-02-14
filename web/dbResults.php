@@ -36,7 +36,7 @@
         $i = 0;
         $arrayCount = count($_SESSION['address']);
     
-        echo "Employees: <br>";
+        echo "Address: <br>";
         echo "<div id='block1'>";
 
         while ($i < $arrayCount) {
@@ -52,7 +52,7 @@
         $i = 0;
         $arrayCount = count($_SESSION['phone_number']);
     
-        echo "Employees: <br>";
+        echo "Phone Number: <br>";
         echo "<div id='block1'>";
 
         while ($i < $arrayCount) {
@@ -79,11 +79,11 @@
     echo "</div>";
 
     echo "<div class='wrapper5'>";
-    if (isset($_SESSION['employee_shift'])) {
+    if (isset($_SESSION['start_time'])) {
         $i = 0;
         $arrayCount = count($_SESSION['work_date']);
     
-        echo "Employees: <br>";
+        echo "Shift: <br>";
         echo "<div id='block1'>";
 
         while ($i < $arrayCount) {
