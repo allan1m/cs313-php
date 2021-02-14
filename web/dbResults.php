@@ -24,7 +24,7 @@
         $counter = count($sfname);
         echo "Employees: <br>";
         echo "<div id='block1'>";
-        while ($i < $length) {
+        while ($i > $length) {
             echo "inside while loop";
             echo $sfname[$i];
             $i++;
