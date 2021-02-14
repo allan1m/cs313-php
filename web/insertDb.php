@@ -9,16 +9,16 @@
 <body>
 <form action="" method="post">
     <input type="text" id="lname" name="lname"></input>
-	<label for="lname">Book</label>
+	<label for="lname">Last Name</label>
 	<br /><br />
     <input type="text" id="fname" name="fname"></input>
-	<label for="fname">Book</label>
+	<label for="fname">First Name</label>
 	<br /><br />
     <input type="text" id="address" name="address"></input>
-	<label for="address">Book</label>
+	<label for="address">Address</label>
 	<br /><br />
     <input type="text" id="phnumber" name="phnumber"></input>
-	<label for="phnumber">Book</label>
+	<label for="phnumber">Phone Number</label>
 	<br /><br />
     <input type="submit" value="Add to Database" />
 </form>

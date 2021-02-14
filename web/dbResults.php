@@ -16,7 +16,6 @@
 
 <?php
 echo "<div class='container'>";
-    echo '<form action="" method="post">';
         if (isset($_SESSION['fname'])) {
             $i = 0;
             $arrayCount = count($_SESSION['fname']);
@@ -25,7 +24,7 @@ echo "<div class='container'>";
             echo "<div id='item'>";
 
             while ($i < $arrayCount) {
-                echo '<input type="checkbox" name="employee_id" id=" employee_id'. $_SESSION['id'][$i] . '"><label for="">' . $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '</label><br>';
+                echo $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '<br>';
                 $i++;
             }
             echo "</div>";
@@ -91,29 +90,7 @@ echo "<div class='container'>";
         }
         echo "</div>";
         }
-        echo '<input type="submit" value="Delete" />';
-    echo "</form>";
 echo "</div>";
-
-if (isset($_POST['employee_id'])) {
-    $employee_id = $_SESSION['id'];
-    require "dbConnect.php";
-    $db = get_db();
-    try{
-        $query = 'DELETE FROM employee WHERE id = :id';
-        $stmt = $db->prepare($query);
-        $stmt->bindValue(':id', $employee_id);
-        $stmt->execute();
-
-        echo "delete successful";
-    }
-    catch(Exception $ex){
-        echo "Error with DB. Details: $ex";
-        die();
-    }
-    
-}
-
 ?>
 </div>
 </body>
