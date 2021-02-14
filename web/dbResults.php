@@ -87,7 +87,7 @@
         echo "<div id='block1'>";
 
         while ($i < $arrayCount) {
-            echo '<input type="checkbox" name="employee_shift" id="' . $_SESSION['shift_id'][$i] . '"><label for="">' . $_SESSION["start_time"][$i] . ' - ' . $_SESSION['end_time'] . '</label><br>';
+            echo '<input type="checkbox" name="employee_shift" id="' . $_SESSION['shift_id'][$i] . '"><label for="">' . $_SESSION["start_time"][$i] . ' - ' . $_SESSION['end_time'][$i] . '</label><br>';
             $i++;
         }
         echo "</div>";
