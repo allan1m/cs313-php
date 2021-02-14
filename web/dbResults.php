@@ -18,12 +18,15 @@
 <?php
     echo "<div class='wrapper'>";
     if (isset($_SESSION['fname'])) {
+        echo "inside first if statement";
         $i = 0;
-        $length = count($_SESSION['fname']);
+        $sfname = $_SESSION['fname'];
+        $counter = count($sfname);
         echo "Employees: <br>";
         echo "<div id='block1'>";
         while ($i <= $length) {
-            echo $length[$i];
+            echo "inside while loop";
+            echo $sfname[$i];
             $i++;
         }
         /*foreach ($_SESSION['fname'] as $key_one => $value) {
