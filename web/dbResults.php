@@ -28,15 +28,6 @@
             echo '<input type="checkbox" name="employee_name" id="' . $_SESSION['id'][$i] . '"><label for="">' . $_SESSION["fname"][$i] . " " .  $_SESSION['lname'][$i] . '</label><br>';
             $i++;
         }
-        /*foreach ($_SESSION['fname'] as $key_one => $value) {
-            echo "<input"$value . " " . "<br>";
-        }*/
-        echo "</div>";
-            
-        echo "<div id='block2'>";
-        foreach ($_SESSION['lname'] as $key => $value) {
-            echo " " . $value . "<br>";
-        }
         echo "</div>";
         }
     echo "</div>";
