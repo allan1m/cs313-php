@@ -14,8 +14,8 @@
     <a href="dbResults.php">Go To Results</a>
     
     <form action="" method="post">
-        <input type="radio" name="employee_n" id="employee_n"><label for="employee_n">Employee</label> <br>
-        <input type="radio" name="schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
+        <input type="checkbox" name="employee_n" id="employee_n"><label for="employee_n">Employee</label> <br>
+        <input type="checkbox" name="schedule" id="employee_schedule"><label for="employee_schedule">Employee schedules</label><br>
         <input type="submit" value="submit" name="Submit">
     </form>
 </body>

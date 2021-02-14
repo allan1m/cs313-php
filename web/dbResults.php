@@ -89,8 +89,6 @@
             $stmt->execute();
 
             $newId = $pdo->lastInsertId('employee_id_seq');
-
-            echo "<script language='javascript'>alert('Successful');</script>";
         }
         catch(Exception $ex){
             echo "Error with DB. Details: $ex";
