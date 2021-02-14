@@ -21,12 +21,12 @@
         echo "inside first if statement";
         $i = 0;
         $arrayLength = count($_SESSION['fname']);
-        echo $arrayLength;
+        echo $arrayLength . "<br>";
         echo "Employees: <br>";
         echo "<div id='block1'>";
         while ($i < $arrayLength) {
-            echo "inside while loop";
-            echo $_SESSION['fname'][$i];
+            echo "inside while loop <br>";
+            echo $_SESSION['fname'][$i] . "<br>";
             $i++;
         }
         /*foreach ($_SESSION['fname'] as $key_one => $value) {
