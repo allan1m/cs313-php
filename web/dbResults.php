@@ -13,15 +13,22 @@
 <div>
     <a href="w05-prove.php">Query selection</a>
 </div>
+<input type="checkbox" name="" id=""><label for="">$value</label>
 
 <?php
     echo "<div class='wrapper'>";
     if (isset($_SESSION['fname'])) {
+        $i = 0;
+        $length = count($_SESSION['fname']);
         echo "Employees: <br>";
         echo "<div id='block1'>";
-        foreach ($_SESSION['fname'] as $key_one => $value) {
-            echo $value . " " . "<br>";
+        while ($i <= $length) {
+            echo $length[$i];
+            $i++;
         }
+        /*foreach ($_SESSION['fname'] as $key_one => $value) {
+            echo "<input"$value . " " . "<br>";
+        }*/
         echo "</div>";
             
         echo "<div id='block2'>";
