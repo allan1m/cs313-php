@@ -90,7 +90,9 @@
 
             $newId = $pdo->lastInsertId('employee_id_seq');
 
-            echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+            echo '<script type="text/javascript">';
+            echo ' alert("JavaScript Alert Box by PHP")';  //not showing an alert box.
+            echo '</script>';
         }
         catch(Exception $ex){
             echo "Error with DB. Details: $ex";
