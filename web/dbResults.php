@@ -30,8 +30,7 @@
         echo "</div>";
         }
     echo "</div>";
-?>
-<?php
+    
     echo "<div class='wrapper2'>";
     if (isset($_SESSION['work_date'])) {
         $i=0;
