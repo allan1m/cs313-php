@@ -9,7 +9,8 @@
 <body>
 <form action="" method="post">
     <input type="text" name="username" id="username"><label for="username"> Username </label>
-    <input type="text" name="password" id="password"><label for="password"> Password </label>
+    <!--<input type="text" name="password" id="password"><label for="password"> Password </label>-->
+    <input type="password" name="password" id="password"><label for="password"> Password </label>
     <input type="submit" value="submit" name="submit">
 </form>
 <?php
@@ -21,7 +22,7 @@
         $password = $_POST['password'];
         
         if(!empty($_POST['password'])){
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            /*$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             try{
                 $query = 'INSERT INTO userLogin(username, password) VALUES(:username, :password)';
@@ -36,12 +37,20 @@
             catch(Exception $ex){
                 echo "Error with DB. Details: $ex";
                 die();
+            }*/
+
+            $db->query('SELECT username, password FROM userlogin');
+            if(password_verify($password, $hashed_password)) {
+                echo("passwords matched");
             }
+                else{
+                    echo "Incorrect Password";
+                }
+        } 
 
 
 
 
-        }
     }
 
 ?>
