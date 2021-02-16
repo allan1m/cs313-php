@@ -1,5 +1,5 @@
 <?php
-    require "querydb.php";
+    require "queryDB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
