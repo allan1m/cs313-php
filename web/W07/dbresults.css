@@ -1,6 +1,12 @@
 /** W05 Prove page **/
-.regular-checkbox{
+.regular-checkbox label:before{
     -webkit-appearance: none;
+    border-radius: 3px;
+}
+
+.regular-checkbox:checked{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
 }
 
 .wrapper {
