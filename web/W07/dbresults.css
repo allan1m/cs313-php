@@ -1,5 +1,5 @@
 /** W05 Prove page **/
-.employee_n, .employee_address, .employee_phone_number, .work_date, .employee_shift{
+#employee_n{
     appearance: none;
     background-color: #fafafa;
 	border: 1px solid #cacece;
