@@ -39,13 +39,7 @@
                 die();
             }*/
 
-            $db->query('SELECT username, password FROM userlogin');
-            if(password_verify($password, $hashed_password)) {
-                echo("passwords matched");
-            }
-                else{
-                    echo "Incorrect Password";
-                }
+ 
         } 
 
 
